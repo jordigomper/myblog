@@ -16,10 +16,10 @@ Tienes todos los ejemplos de la guía en [mi repositorio personal de GitHUb](htt
 
 ## Index.
 1. [React](#react)  
-    1.1[Que es React?](#que-es-react)  
-    1.2[React llega a tu ordenador](#react-llega-a-tu-ordenador)  
-    1.3[Requisitos](#requisitos)  
-    1.4[Instalación](#instalación)  
+    1.1.[Que es React?](#que-es-react)  
+    1.2.[React llega a tu ordenador](#react-llega-a-tu-ordenador)  
+    1.3.[Requisitos](#requisitos)  
+    1.4.[Instalación](#instalación)  
 2. [Introducción a nuestra aplicación](#introducción-a-nuestra-aplicación)  
 3. [Capitulo 1. Creando la interfaz](#capitulo-1-creando-la-interfaz)  
  3.1[Importar y exportar módulos](#importar-y-exportar-módulos)  
