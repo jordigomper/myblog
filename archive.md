@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Archive
+title: Archivo
 permalink: /archive/
 ---
 
 <section id="archive">
-<h2>Articles from this year</h2>
+<h2>Articulos de este año</h2>
 {% for post in site.posts %}
   {% unless post.next %}
 
