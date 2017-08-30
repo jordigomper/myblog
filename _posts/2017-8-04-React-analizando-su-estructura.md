@@ -410,7 +410,7 @@ Puedes ver una lista con las diferentes propiedades que puedes utilizar pulsando
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-class Filas extends Component {
+class Rows extends Component {
     paintRow = (color, i) => {
         const row = {
             backgroundColor: color,
