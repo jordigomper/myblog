@@ -31,8 +31,7 @@ La aplicación contiene un menú principal y un sub-menú para las secciones que
 ## Descomponiendo la App
 Descomponiendo la aplicación, he creado los siguientes componentes:
 
-### Componentes de apoyo
-**Index:** 
+**Index (Componente de apoyo):** 
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -56,7 +55,7 @@ render(
 ```
 Contiene el componente **App** y lo introduce en la DOM.  
 
-**App:** 
+**App (Componente de apoyo):** 
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -78,7 +77,7 @@ export default class App extends Component {
 ```
 Contiene **Header** y un elemento div con la id="display" donde se mostraran las diferentes secciones de la app. La idea es actualizar solo el elemento "div id="display". Se importan los diferentes componentes de la aplicación.  
 
-**Header:** 
+**Header (Componente de apoyo):** 
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -98,7 +97,7 @@ export default class Header extends Component {
 ```
 Contiene los componentes **Title** y **Nav**. Como nunca se modifica, solo lo incorporo en el componente **App**, actualizando solo las diferentes secciones elegidas en el menú.  
 
-**Title:** 
+**Title (Componente lógico):** 
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -113,7 +112,7 @@ export default class Title extends Component {
 ```
 Contiene el elemento title que muestra el titulo de la página.  
 
-**Nav:** 
+**Nav (Componente lógico):** 
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -137,7 +136,7 @@ export default class Nav extends Component {
 ```
 Contiene el menú principal de la aplicación.  
 
-**ArticleTemp:** 
+**ArticleTemp (Componente lógico):** 
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -161,7 +160,7 @@ export default class ArticleTemp extends Component {
 ```
 Es una plantilla para mostrar los artículos o descripciones en cualquier zona de la app. A través de props mandamos la información que compone el articulo. Se utiliza para: Articulo, Batidos y el componente ButtonTemp.
 
-**ListTemp:**  
+**ListTemp (Componente lógico):**  
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -179,7 +178,7 @@ export default class List extends Component {
 ```
 Recibe un array de objetos y crea una lista con la imagen en miniatura y una breve descripción. Al pulsar envía al articulo. Se utiliza para mostrar la página principal, la lista de batidos y la lista de batidos que componen un reto.
 
-**ChallengesIndex:**  
+**ChallengesIndex (Componente lógico):**  
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -200,7 +199,7 @@ export default class ChallengesIndex extends Component {
 ```
 Añade la el sub-menú que utiliza esta sección. Contiene un elemento "div id="challenge"" donde se introducirán los componentes que forman parte de esta sección.
 
-**SubNav:**  
+**SubNav (Componente lógico):**  
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -225,7 +224,7 @@ export default class SubNav extends Component {
 ```
 Muestra el sub-menú de la sección de retos.
 
-**ButtonTemp:**
+**ButtonTemp (Componente lógico):**
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -246,7 +245,7 @@ export default class ChallengeDay extends Component {
 ```
 Esta plantilla contiene los componentes ArticleTemp para poder mostrar la descripción, un botón y un muro que dependiendo en que lugar se monte este componente puede tener diferentes funciones. Por ejemplo en la sección de reto disponible mostrara información del reto, el botón sirve para unirse y el muro para que los usuarios comenten diferentes dudas. Se utiliza en el index de retos disponibles y reto del día.
 
-**ForumTemp:**
+**ForumTemp (Componente lógico):**
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
