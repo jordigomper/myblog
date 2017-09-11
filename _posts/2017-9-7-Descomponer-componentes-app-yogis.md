@@ -5,7 +5,7 @@ img: blog/i_app.jpg
 categories: app
 ---
 
-Hola chicos! En este articulo voy a descomponer mi app Yogis, intentando hacer todos los componentes re-utilizables.
+Hola chic@s! En este articulo voy a descomponer mi app Yogis, intentando hacer todos los componentes re-utilizables.
 
 [Aprende Javascript con MentoringJS - Step 11](http://mentoringjs.com/)
 
@@ -259,7 +259,7 @@ export default class ChallengeDay extends Component {
             <div>
                 <ArticleTemp />
                 <button>{this.props.buttontext}</button>
-                <Forum />
+                <ForumTemp />
             </div>
         )
     }
@@ -276,7 +276,7 @@ ForumTemp.js:
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-export default class Forum extends Component {
+export default class ForumTemp extends Component {
     render(){
         return(
             <div>
