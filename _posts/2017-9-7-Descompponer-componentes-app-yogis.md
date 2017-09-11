@@ -31,7 +31,7 @@ La aplicación contiene un menú principal y un sub-menú para las secciones que
 ## Descomponiendo la App
 Descomponiendo la aplicación, he creado los siguientes componentes:
 
-**Index (Componente de apoyo):**
+**Index (Componente de apoyo):**  
 Contiene el componente **App** y lo introduce en la DOM.
 ```
 import React, { Component } from 'react'
@@ -55,7 +55,7 @@ render(
 )
 ```
 
-**App (Componente de apoyo):** 
+**App (Componente de apoyo):**   
 Contiene **Header** y un elemento div con la id="display" donde se mostraran las diferentes secciones de la app. La idea es actualizar solo el elemento "div id="display". Se importan los diferentes componentes de la aplicación.  
 ![Index yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/index.PNG "Aplicación yogis")
 ```
@@ -78,8 +78,8 @@ export default class App extends Component {
 }
 ```
 
-**Header (Componente de apoyo):** 
-Contiene los componentes **Title** y **Nav**. Como nunca se modifica, solo lo incorporo en el componente **App**, actualizando solo las diferentes secciones elegidas en el menú.
+**Header (Componente de apoyo):**   
+Contiene los componentes **Title** y **Nav**. Como nunca se modifica, solo lo incorporo en el componente **App**, actualizando solo las diferentes secciones elegidas en el menú.  
 ![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/menu.PNG "Aplicación yogis")
 ```
 import React, { Component } from 'react'
@@ -99,7 +99,9 @@ export default class Header extends Component {
 }
 ```
 
-**Title (Componente lógico):** 
+**Title (Componente lógico):**  
+Contiene el elemento title que muestra el titulo de la página.  
+![Title yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/title.png "Aplicación yogis")
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -112,9 +114,10 @@ export default class Title extends Component {
     }
 }
 ```
-Contiene el elemento title que muestra el titulo de la página.  
 
-**Nav (Componente lógico):** 
+**Nav (Componente lógico):**  
+Contiene el menú principal de la aplicación.  
+![Menu yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/menu.png "Aplicación yogis")
 ```
 import React, { Component } from 'react'
 import { render } from 'react-dom'
@@ -136,9 +139,8 @@ export default class Nav extends Component {
     }
 }
 ```
-Contiene el menú principal de la aplicación.  
 
-**ArticleTemp (Componente lógico):** 
+**ArticleTemp (Componente lógico):**  
 Es una plantilla para mostrar los artículos o descripciones en cualquier zona de la app. A través de props mandamos la información que compone el articulo. Se utiliza para: Articulo, Batidos y el componente ButtonTemp.
 ![ArticleTemps yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/articletemp.png "Aplicación yogis")
 ```
@@ -163,8 +165,8 @@ export default class ArticleTemp extends Component {
 }
 ```
 
-**ListTemp (Componente lógico):**
-Recibe un array de objetos y crea una lista con la imagen en miniatura y una breve descripción. Al pulsar envía al articulo. Se utiliza para mostrar la página principal, la lista de batidos y la lista de batidos que componen un reto.
+**ListTemp (Componente lógico):**  
+Recibe un array de objetos y crea una lista con la imagen en miniatura y una breve descripción. Al pulsar envía al articulo. Se utiliza para mostrar la página principal, la lista de batidos y la lista de batidos que componen un reto.  
 ![ListTemp yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/listtemp.png "Aplicación yogis")
 ```
 import React, { Component } from 'react'
@@ -183,7 +185,7 @@ export default class List extends Component {
 ```
 
 **ChallengesIndex (Componente lógico):**  
-Añade la el sub-menú que utiliza esta sección. Contiene un elemento "div id="challenge"" donde se introducirán los componentes que forman parte de esta sección.
+Añade la el sub-menú que utiliza esta sección. Contiene un elemento "div id="challenge"" donde se introducirán los componentes que forman parte de esta sección.  
 ![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/retos-principal2.PNG "Aplicación yogis")
 
 ![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/retos-principal3.PNG "Aplicación yogis")
@@ -207,7 +209,7 @@ export default class ChallengesIndex extends Component {
 ```
 
 **SubNav (Componente lógico):**  
-Muestra el sub-menú de la sección de retos.
+Muestra el sub-menú de la sección de retos.  
 ![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/retos-principal.PNG "Aplicación yogis")
 ```
 import React, { Component } from 'react'
@@ -232,8 +234,8 @@ export default class SubNav extends Component {
 }
 ```
 
-**ButtonTemp (Componente lógico):**
-Esta plantilla contiene los componentes ArticleTemp para poder mostrar la descripción, un botón y un muro que dependiendo en que lugar se monte este componente puede tener diferentes funciones. Por ejemplo en la sección de reto disponible mostrara información del reto, el botón sirve para unirse y el muro para que los usuarios comenten diferentes dudas. Se utiliza en el index de retos disponibles y reto del día.
+**ButtonTemp (Componente lógico):**  
+Esta plantilla contiene los componentes ArticleTemp para poder mostrar la descripción, un botón y un muro que dependiendo en que lugar se monte este componente puede tener diferentes funciones. Por ejemplo en la sección de reto disponible mostrara información del reto, el botón sirve para unirse y el muro para que los usuarios comenten diferentes dudas. Se utiliza en el index de retos disponibles y reto del día.  
 ![ButtonTemp yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/buttontemp.png "Aplicación yogis")
 ```
 import React, { Component } from 'react'
@@ -254,7 +256,7 @@ export default class ChallengeDay extends Component {
 }
 ```
 
-**ForumTemp (Componente lógico):**
+**ForumTemp (Componente lógico):**  
 Desde props enviamos la información del muro, luego lo muestra con unas características que dependen de en que sección se encuentre.  
 
 La idea es reutilizar todo lo posible. Por ejemplo cuando pulsas en el menú la opción Batidos, envía al componente ListTemp por porps un array con todos lo batidos, lo mismo con retos disponibles o reto del día, al pulsar, envía por props a ButtonTemp toda la información para montar ese componente.  
