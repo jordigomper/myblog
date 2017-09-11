@@ -106,7 +106,7 @@ export default class Header extends Component {
 
 **Title (Componente lógico):**  
 Contiene el elemento title que muestra el titulo de la página.  
-![Title yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/title.png "Aplicación yogis")  
+![Title yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/title.PNG "Aplicación yogis")  
 Title.js:
 ```
 import React, { Component } from 'react'
@@ -123,7 +123,7 @@ export default class Title extends Component {
 
 **Nav (Componente lógico):**  
 Contiene el menú principal de la aplicación.  
-![Menu yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/menu.png "Aplicación yogis")  
+![Menu yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/menu.PNG "Aplicación yogis")  
 Nav.js:
 ```
 import React, { Component } from 'react'
