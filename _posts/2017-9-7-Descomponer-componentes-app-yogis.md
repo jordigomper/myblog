@@ -7,6 +7,8 @@ categories: app
 
 Hola chicos! En este articulo voy a descomponer mi app Yogis, intentando hacer todos los componentes re-utilizables.
 
+[Aprende Javascript con MentoringJS - Step 11](http://mentoringjs.com/)
+
 ## Introducción
 Voy a repasar las secciones principales de mi aplicación y voy a indicar con que componente se va a mostrar, más abajo describo los diferentes componentes:
 
