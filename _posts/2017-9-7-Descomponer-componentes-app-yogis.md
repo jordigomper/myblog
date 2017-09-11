@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Descomponiendo mi aplicación yogis
-img: blog/i_app.jpg
+img: blog/i_comp.jpg
 categories: app
 ---
 
