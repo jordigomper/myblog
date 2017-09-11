@@ -1,16 +1,18 @@
 ---
 layout: post
 title: Deployar con Surge la app yogis!
-img: blog/i_surge.PNG
+img: blog/i_surge.png
 categories: app, herramientas
 ---
 
-Hola chic@s! En este articulo voy a utilizar [Surge](http://surge.sh/) para desplegar mi aplicación yogis y os voy a contar como hago.
+Hola chic@s! En este articulo voy a utilizar [Surge](http://surge.sh/) para desplegar mi aplicación yogis y os voy a contar como hago.  
+
+[Aprende Javascript con MentoringJS - Step 11](http://mentoringjs.com/)
 
 [**Surge**](http://surge.sh/) es una herramienta que nos permite crear sitios estáticos. Se instala desde el gestor de paquetes **npm** de Node.js y funciona con lineas de comandos de una forma muy sencilla. Nos ofrece un hosting, desde la misma consola puedes registrarte y poner el nombre de dominio que quieras. Para registrarte solo necesitas un email. Es totalmente gratuito.  
 
 ## Como he desplegado mi aplicación con Surge
-Primero de todo, he necesitado tener instalado la version de [Node.js](https://nodejs.org/en/) en su ultima versión.
+Primero de todo, he necesitado tener instalado la version de [Node.js](https://nodejs.org/en/) en su ultima versión.  
 
 Desde la consola cmd de windows, he instalado Surge introduciendo el comando **npm install --global surge**.  
 ![Instalando Surge](https://jordigomper.github.io/myblog/img/a_surge/instalar.PNG "Instalando Surge")  
