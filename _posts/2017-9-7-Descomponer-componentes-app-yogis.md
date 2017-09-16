@@ -30,141 +30,143 @@ Voy a repasar las secciones principales de mi aplicación y voy a indicar con qu
 
 La aplicación contiene un menú principal y un sub-menú para las secciones que se encuentran en retos.
 
+## React-router
+Para la navegación por las diferentes páginas al seleccionar el menu he utilizado react-router. Es sencillo de utilizar, en una hora puedes aprender su funcionamiento y instalarlo en la aplicación. Voy a ir comentando las funciones a medida que salen.
+
 ## Descomponiendo la App
 Descomponiendo la aplicación, he creado los siguientes componentes:
 
-**Index (Componente de apoyo):**  
-Contiene el componente **App** y lo introduce en la DOM.  
-Index.js:
+**Index.js**  
 ```
-import React, { Component } from 'react'
-import { render } from 'react-dom'
-import App from './App.js'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom'
+import App from './App';
 
-export default class Index extends Component {
-
-    render(){
-        return(
-            <div>
-                <App />
-            </div>
-        )
-    }
-}
-
-render(
-    <Index />,
+ReactDOM.render(
+    (
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
+    ), 
     document.getElementById('root')
-)
+);
 ```
+Contiene el componente que contiene toda la aplicación y se encarga de insertarlo en la DOM. Se importan diferentes bibliotecas, react y react-dom  permiten utilizar componentes personalizados y insertarlos en la DOM, react-router-dom es el enrutador que nos ofrece react-router.  
 
-**App (Componente de apoyo):**   
-Contiene **Header** y un elemento div con la id="display" donde se mostraran las diferentes secciones de la app. La idea es actualizar solo el elemento "div id="display". Se importan los diferentes componentes de la aplicación.  
-![Index yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/index.PNG "Aplicación yogis")  
-App.js:
+**BrowserRouter** es un componente de react-router. Es el enrutador y debe usarse cuando la app maneja peticiones dinámicas, es decir, desde un navegador.  
+
+**App.js**
 ```
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React from 'react'
 import Header from './Header.js'
-import ArticleTemp from './ArticleTemp.js'
-import ListTemp from './ListTemp.js'
-import ChallengeIndex from './ChallengeIndex.js'
+import Main from './Main.js'
 
-export default class App extends Component {
-    render(){
-        return(
-            <div>
-                <Header />
-                <div id="display" ></div>
-            </div>
-        )
-    }
-}
-```
+const App = () => (
+    <div>
+        <Header />
+        <Main />
+    </div>
+)
 
-**Header (Componente de apoyo):**   
-Contiene los componentes **Title** y **Nav**. Como nunca se modifica, solo lo incorporo en el componente **App**, actualizando solo las diferentes secciones elegidas en el menú.  
-![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/menu.PNG "Aplicación yogis")  
-Header.js:
+export default App
 ```
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+Componente simple, llama a Header y Main. Es la página principal de la app. Mostrara el menú y el contenido.  
+
+El componente Main hace de contenedor para cargar las diferentes secciones. Header es estático para toda la app.  
+
+**Header.js**
+```
+import React from 'react'
 import Title from './Title.js'
 import Nav from './Nav.js'
 
-export default class Header extends Component {
-    render(){
-        return(
-            <header>
-                <Title />
-                <Nav />
-            </header>
-        )
-    }
-}
+const Header = () => (
+    <div>
+        <Title />
+        <Nav />
+    </div>
+)
+
+export default Header
 ```
+Componente simple que contiene el titulo y el menú de navegación.  
 
-**Title (Componente lógico):**  
-Contiene el elemento title que muestra el titulo de la página.  
-![Title yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/title.PNG "Aplicación yogis")  
-Title.js:
+**Title.js**
 ```
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React from 'react'
 
-export default class Title extends Component {
-    render(){
-        return(
-            <title></title>
-        )
-    }
-}
+const Title = () => (
+    <h1>
+        yogis!
+    </h1>
+)
+
+export default Title
 ```
+Muestra el titulo de la aplicación. Hacer componentes pequeños como este da la opción de re-utilizarlo en cualquier parte del código, por ejemplo un banner.  
 
-**Nav (Componente lógico):**  
-Contiene el menú principal de la aplicación.  
-![Menu yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/menu.PNG "Aplicación yogis")  
-Nav.js:
+**Nav.js**
 ```
-import React, { Component } from 'react'
-import { render } from 'react-dom'
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-export default class Nav extends Component {
-
-    render(){
-        return(
+const Nav = () => (
+    <header>
             <nav>
                 <ul>
-                    <li>Princpal</li>
-                    <li>Articulos</li>
-                    <li>Batidos</li>
-                    <li>Retos</li>
-                    <li>Mi cuenta</li>
+                    <li><Link to='/'>Principal</Link></li>
+                    <li><Link to='/Articles'>Articulos</Link></li>      
+                    <li><Link to='/Smoothies'>Batidos</Link></li>       
+                    <li><Link to='/Challenges'>Retos</Link></li>        
+                    <li><Link to='/MyAcount'>Mi cuenta</Link></li>          
                 </ul>
-            </nav>
-        )
-    }
-}
-```
+            </nav>  
+    </header>
+)
 
-**ArticleTemp (Componente lógico):**  
-Es una plantilla para mostrar los artículos o descripciones en cualquier zona de la app. A través de props mandamos la información que compone el articulo. Se utiliza para: Articulo, Batidos y el componente ButtonTemp.
-![ArticleTemps yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/articletemp.png "Aplicación yogis")  
-ArticleTemp.js:
+export default Nav
+```
+Contiene el menú de la aplicación. react-router-dom permite utilizar el componente Link para poder navegar por la aplicación. Dentro, se ha de indicar el la propiedad to="" el nombre del componente a insertar.  
+
+**Main.js**
+```
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Home from './Home'
+import Articles from './Articles'
+import Smoothies from './Smoothies'
+import Challenges from './Challenges'
+import MyAcount from './MyAcount'
+
+const Main = () => (
+    <main>
+        <Switch>
+            <Route exact path='/' component={Home} />
+            <Route path='/Articles' component={Articles} />
+            <Route path='/Smoothies' component={Smoothies} />
+            <Route path='/Challenges' component={Challenges} />
+            <Route path='/MyAcount' component={MyAcount} />
+        </Switch>
+    </main>
+)
+
+export default Main
+```
+Muestra el contenido de toda la app. Router indica que los componentes Link deben de ser mostrados aquí. Es un componente de react-router.  
+
+**ArticleTemp.js**
 ```
 import React, { Component } from 'react'
-import { render } from 'react-dom'
 
 export default class ArticleTemp extends Component {
-    // const {article} = this.props
-
     render(){
         return(
             <div>
                 <article >
-                    <header> {/* article.header */} </header>
-                    <img> {/* article.image */} </img>
-                    <p> {/* article.description */} </p>
+                    <h3>{this.props.item.title}</h3>
+                    <img src={require('./img/article/img1.PNG')} alt="" width={this.props.item.width}/>
+                    <p>{this.props.item.desc}</p>
                 </article>  
             </div>
         )
@@ -172,126 +174,212 @@ export default class ArticleTemp extends Component {
 
 }
 ```
+Un componente plantilla para mostrar los diferentes artículos de la app. Desde props se envia toda la información. Tiene la característica que se puede modificar el ancho dependiendo del formato que quiero mostrar de la imagen.  
 
-**ListTemp (Componente lógico):**  
-Recibe un array de objetos y crea una lista con la imagen en miniatura y una breve descripción. Al pulsar envía al articulo. Se utiliza para mostrar la página principal, la lista de batidos y la lista de batidos que componen un reto.  
-![ListTemp yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/listtemp.png "Aplicación yogis")  
-LisTemp.js:
+**ListTemp.js**
 ```
 import React, { Component } from 'react'
-import { render } from 'react-dom'
 
-export default class List extends Component {
-
+export default class ListTemp extends Component {
     render(){
+        const array = this.props.articles.map((item, index) => {
+            return(
+                    <li key={index}>
+                        <img src={require('./img/article/img1.PNG')} alt="" width={item.width}/>
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
+                    </li>
+            )})
+
         return(
-            <div>
-                {/*this.props.list.map(this.showItem(index))*/}
-            </div>
+            <ul>
+                {array}
+            </ul>
         )
     }   
 }
 ```
+Componente que utilizo de plantilla para mostrar las diferentes listas de la página. Sirve en modo de presentación, debe de mostrar un resumen de la descripción.  
 
-**ChallengesIndex (Componente lógico):**  
-Añade la el sub-menú que utiliza esta sección. Contiene un elemento "div id="challenge"" donde se introducirán los componentes que forman parte de esta sección.  
-![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/retos-principal2.PNG "Aplicación yogis")  
-ChallengesIndex.js:
+En un futuro incluirá una función que mostrara el elemento seleccionado.  
+
+**Home.js**
 ```
 import React, { Component } from 'react'
-import { render } from 'react-dom'
-import SubNav from './SubNav.js'
-import ButtonTemp from './ButtonTemp.js'
-import ForumTemp from './ForumTemp.js'
+import ListTemp from './ListTemp.js'
 
-export default class ChallengesIndex extends Component {
+export default class Home extends Component {
     render(){
         return(
             <div>
-                <SubNav />
-                <div ></div>
+                <h3> PRINCIPAL </h3>
+                <ListTemp articles={this.state.articles} />
             </div>
-        )
+      )
     }
 }
 ```
+Es la página principal. Utiliza el componente ListTemp en modo de presentación de todos los artículos enviando la información por props.  
 
-**SubNav (Componente lógico):**  
-Muestra el sub-menú de la sección de retos.  
-![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/retos-principal.PNG "Aplicación yogis")  
-SubNav.js:
+**Smoothies.js**
 ```
 import React, { Component } from 'react'
-import { render } from 'react-dom'
+import ListTemp from './ListTemp'
 
-export default class SubNav extends Component {
-    state = {
-        menu: ['Reto principal','Reto del dia','Calendario']
-    }
-    
+export default class Smoothies extends Component {
     render(){
         return(
+            <div>
+            <h3> BATIDOS </h3>
+              <ListTemp articles={this.state.smoothies} />
+          </div>
+      )
+    }
+}
+```
+Utiliza el componente ListTemp para mostrar un resumen de todos los batidos.  
+
+**Challenges.js**
+```
+import React from 'react'
+import SubNav from './SubNav.js'
+import MainChallenge from './MainChallenge.js'
+
+const Challenges = () => (
+    <div>
+        <SubNav />
+        <MainChallenge />
+    </div>
+)
+
+export default Challenges
+```
+Esta seccion contiene tres secciones. Utiliza el mismo sistema que App. Contiene un sub-menú y un contenedor donde mostrara el contenido.  
+
+**SubNav.js**
+```
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+const SubNav = () => (
+    <header>
             <nav>
                 <ul>
-                    {this.state.menu.map((item, index) => {
-                        <li key={index}> {item} </li>
-                    })}
+                    <li><Link to='/Challenges/'>Reto</Link></li>
+                    <li><Link to='/Challenges/ChallengeDay'>Reto del dia</Link></li>        
+                    <li><Link to='/Challenges/CalendarChallenger'>Calendario</Link></li>            
                 </ul>
-            </nav>
-        )
-    }
-}
+            </nav>  
+    </header>
+)
+
+export default SubNav
 ```
+Contiene las tres partes de retos mosrtandolos en el menú. Utiliza react-router.  
 
-**ButtonTemp (Componente lógico):**  
-Esta plantilla contiene los componentes ArticleTemp para poder mostrar la descripción, un botón y un muro que dependiendo en que lugar se monte este componente puede tener diferentes funciones. Por ejemplo en la sección de reto disponible mostrara información del reto, el botón sirve para unirse y el muro para que los usuarios comenten diferentes dudas. Se utiliza en el index de retos disponibles y reto del día.  
-![ButtonTemp yogis](https://jordigomper.github.io/myblog/img/a_desc_yogis/buttontemp.png "Aplicación yogis")  
-ButtonTemp.js:
+**MainChallenge.js**
 ```
-import React, { Component } from 'react'
-import { render } from 'react-dom'
-import ArticleTemp from './ArticleTemp.js'
-import Forum from './ForumTemp.js'
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import Challenge from './Challenge'
+import ChallengeDay from './ChallengeDay'
+import CalendarChallenger from './CalendarChallenger'
 
-export default class ChallengeDay extends Component {
-    render(){
-        return(
-            <div>
-                <ArticleTemp />
-                <button>{this.props.buttontext}</button>
-                <ForumTemp />
-            </div>
-        )
-    }
-}
+const MainChallenge = () => (
+    <main>
+        <Switch>
+            <Route exact path='/Challenges/' component={Challenge} />
+            <Route path='/Challenges/ChallengeDay' component={ChallengeDay} />
+            <Route path='/Challenges/CalendarChallenger' component={CalendarChallenger} />
+        </Switch>
+    </main>
+)
+
+export default MainChallenge
 ```
+Componente que utiliza react-router como contenedor para mostrar las diferentes secciones de Challenges.js.  
 
-**ForumTemp (Componente lógico):**  
-Desde props enviamos la información del muro, luego lo muestra con unas características que dependen de en que sección se encuentre.  
-
-La idea es reutilizar todo lo posible. Por ejemplo cuando pulsas en el menú la opción Batidos, envía al componente ListTemp por porps un array con todos lo batidos, lo mismo con retos disponibles o reto del día, al pulsar, envía por props a ButtonTemp toda la información para montar ese componente.  
-![Menú yogis](https://jordigomper.github.io/myblog/img/a_mockup_yogis/retos-principal3.PNG "Aplicación yogis")  
-ForumTemp.js:
+**ForumTemp.js**
 ```
 import React, { Component } from 'react'
-import { render } from 'react-dom'
 
 export default class ForumTemp extends Component {
     render(){
         return(
             <div>
                 <div>
-                        {/*muestra el foro*/}
+                    <img src={require('./img/article/muro.PNG')} alt="" />
                 </div>
                 <form>
                     <input type="placeholder" value="Introduce tu comentario..." />
-                    <button type="submit" value="Enviar comentario" />
+                    <input type="submit" value="Enviar"/>
                 </form>
             </div>
         )
     }
 }
 ```
+Componente que contiene un muro tipo Facebook. Mostrara el contenido dependiendo de la sección donde se encuentre.  
+
+**Challenge.js**
+```
+import React, { Component } from 'react'
+import ArticleTemp from './ArticleTemp.js'
+import ForumTemp from './ForumTemp.js'
+
+export default class Challenge extends Component {
+    render(){
+        return(
+            <div>
+                <h3> RETO </h3>
+                <ArticleTemp item={this.state.challenge} />
+                <button>Unirse al reto</button>  
+                <ForumTemp />
+          </div>
+      )
+    }
+}
+```
+Este componente se muestra por defecto cuando se selecciona Retos. Contiene la información del reto utilizando ArticleTemp para mostrarlo, un botón para unirse al reto y un muro desde el componente FroumTemp donde los usuarios pueden exponer sus dudas.  
+
+**ChallengeDay.js**
+```
+import React, { Component } from 'react'
+import ArticleTemp from './ArticleTemp.js'
+import ForumTemp from './ForumTemp.js'
+
+export default class ChallengeDay extends Component {
+    render(){
+        return(
+            <div>
+                <h3> RETO DEL DIA </h3>
+                <ArticleTemp item={this.state.challenge} />
+                <button>Reto conseguido!</button>  
+                <ForumTemp />
+            </div>
+      )
+    }
+}
+```
+Igual que Challenge.js con la diferencia que mostrara el reto del dia.  
+
+**CalendarChallenger.js**
+```
+import React, { Component } from 'react'
+import ListTemp from './ListTemp'
+
+export default class CalendarChallenger extends Component {
+    render(){
+        return(
+            <div>
+                <h3> CALENDARIO DEL RETO </h3>
+                <ListTemp articles={this.state.smoothies} />
+          </div>
+      )
+    }
+}
+```
+Utilizando ListTemp, muestra los batidos de los días de reto.  
 
 Step by step mi aplicación va cogiendo forma, espero que te pueda ayudar a crear la tuya! Hasta luegorrr!  
 

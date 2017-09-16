@@ -26,16 +26,15 @@ Si todo ha salido bien, tiene que salir la siguiente imagen:
 En esta pantalla dice que dentro de la carpeta de la aplicación a creado el directorio **build\static\js** y que dentro se encuentra el archivo **main.b5e1f395.js**, este archivo es la copia en producción. También indica cuanto ocupa.  
 
 Si te ha dado algún error, revisa el archivo que te indica. Todos los componentes y líneas de código tienen que estar bien estructurados. Piensa que surge envía un flujo de datos por nuestra aplicación y detecta todos los fallos, es comparable a un error de compilación cuando detecta algún fallo.  
-Por ejemplo, los componentes tienen que importarse cuando se utilizan en un archivo externo y también permitir su exportación.
-En mi caso, mi aplicación todavía no tiene ninguna función, solo la estoy descomponiendo. Hay componentes que no están llamados en ningún lugar, entonces desde el componente **App.js** los he importado aunque no los utilice, si no lo hago, esos componentes no se incluyen en mi copia de producción.  
+Por ejemplo, los componentes tienen que importarse cuando se utilizan en un archivo externo y también permitir su exportación.  
 
 Ahora voy a registrarme para poder subir mi aplicación al hosting que me ofrece **Surge**.  
 Introduzco el comando **surge build** y me va a pedir mi email, contraseña y  nombre del dominio.
 ![surge build](https://jordigomper.github.io/myblog/img/a_surge/subir.PNG "surge build")  
 
-Automáticamente, **Surge** a subido la copia de producción a mi nuevo dominio http://jordigomper.surge.sh.  
-**Surge no publicara la web hasta que no valides tu dirección de email.** Una vez la he validado, ya tengo mi aplicación desplegada y publicada.
-En mi caso no mostrara nada, ya que todavía no tiene contenido.  
+Automáticamente, **Surge** a subido la copia de producción a mi nuevo dominio http://jordigomper.surge.sh. De momento carece de css, ya que el ejercicio era contruir los componentes necesarios. También utilizo el servicio que proporciona [lorempixel](http://lorempixel.com) para generar imagenes aleatorias.  
+
+**Surge no publicara la web hasta que no valides tu dirección de email.** Una vez la he validado, ya tengo mi aplicación desplegada y publicada.   
 
 Ahora que ya sabes como desplegar tu aplicación, a que esperas?  
 
