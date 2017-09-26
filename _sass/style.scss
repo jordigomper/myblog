@@ -97,7 +97,7 @@ pre {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #000;
+    background-color: white;
 }
 
 .link {
@@ -109,7 +109,7 @@ pre {
 
 .link a {
     display: inline-block;
-    color: rgba(255, 255, 255, 0.7);
+    color: black;
     text-align: center;
     padding: 2px 16px;
     text-decoration: none;
@@ -117,8 +117,8 @@ pre {
 
 
 .link a:hover, .dropdown:hover .dropbtn {
-    background-color: rgba(123, 123, 123, 0.36);
-    color: #fff;
+    background-color: black;
+    color: #000;
 }
 
 .link .dropdown {
