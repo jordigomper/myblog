@@ -7,7 +7,7 @@ categories: articulo
 
 Hola chicos! En este articulo quiero repasar las mejoras más importantes que trae **ES6**.  
 
-Cada versión que nos ofrece ESCM encontramos facilidad ya sea en el código, en nuevas funciones, nuevas variables... Esta vez, ES6 viene cargado de novedades que nos va a ayudar nuestro día a día.  
+Cada versión que nos ofrece ESCM encontramos facilidad ya sea en el código, en nuevas funciones, nuevas variables... Esta vez, **ES6** viene cargado de novedades que nos va a ayudar nuestro día a día.  
 
 >ES6 son los reyes magos...  
 
@@ -78,11 +78,11 @@ var MY_FAV = 20; // error
 
 Con esta novedad enterramos muchas de las desventajas que nos encontrábamos al comenzar a programar con JS. Sin duda estas nuevas variables dan un nuevo potencial a JS y ara que podamos diseñar un código más completo y seguro.  
 
-En muchas ocasiones tenemos la necesidad de extraer o asignar diversas variables que se encuentran en el interior de un array o objeto. La nueva asignación por **desestructuración** consigue abrir un objeto o array y extraer información o asignarle nuevos valores de una sola pieza, así de sencillo:
+En muchas ocasiones tenemos la necesidad de extraer o asignar diversas variables que se encuentran en el interior de un objeto. La nueva asignación por **desestructuración** consigue abrir un objeto y extraer información o asignarle nuevos valores de una sola pieza, así de sencillo:
 
 ```
 // ES6
- // asignar variables a objetos o arrays
+ // asignar variables a objetos
 var user = {name:'Linux', age'26', pic:'penguin.jpg', posts: []};
 
  // extraer a variables locales
@@ -122,11 +122,11 @@ function viewUser (user){
 };
 ```
 
-Como puedes ver la desestructuración de ES6 ahorra mucho código y utiliza una forma muy sencilla para manipular las variables en el interior de objetos y arrays. Otro ejemplo más del potencial de ES6.  
+Como puedes ver la desestructuración de **ES6** ahorra mucho código y utiliza una forma muy sencilla para manipular las variables en el interior de objetos y arrays. Otro ejemplo más del potencial de **ES6**.  
 
 >Cada vez estas más convencido que ES6 son lo reyes? No me guardes rencor por eso...  
 
-Todos los códigos deben de tener mínimo... un bucle? ES6 trae una ventaja a la hora de poder acceder a las keys de un objeto dentro del mismo bucle:
+Todos los códigos deben de tener mínimo... un bucle? **ES6** trae una ventaja a la hora de poder acceder a las keys de un objeto dentro del mismo bucle:
 
 ```
 // ES6
@@ -205,9 +205,9 @@ Otra de los nuevos métodos es **Array.prototype.copyWithin** que copia la parte
 
 Es casi imposible aprenderse todos los métodos, así que con saber que existe esa función ya vale, después google te ayudara a recordad como funciona...  
 
-También disponemos de las **fat arrows**, que nos facilita código a la hora de crear una función. La característica principal de estas funciones es que siempre hacen referencia al objeto que la invoca.  
+Disponemos de las **fat arrows**, que nos facilita código a la hora de crear una función. La característica principal de estas funciones es que siempre hacen referencia al objeto que la invoca.  
 
-En su sintaxis podemos encontrar diferentes variaciones. Si no pasamos ningún parámetro por referencia podemos excluir los paréntesis, no necesita usar llaves para el contenido si solo usa una sola expresión y no hace falta una declaración de devolución y para usar la des estructuración sobre un objeto hay que pasar el parámetro entre corchetes.  
+En su sintaxis podemos encontrar diferentes variaciones. Si no pasamos ningún parámetro por referencia o solo uno podemos excluir los paréntesis, no necesita usar llaves para el contenido si solo usa una sola expresión y no hace falta una declaración de devolución y para usar la des estructuración sobre un objeto hay que pasar el parámetro entre corchetes.  
 
 ```
 // ES6
@@ -226,7 +226,7 @@ const arrow2 = (x) => {
 this.items.map(x => this.doSomethingWith(x))
 ```
 
-Esta función la vamos a ver en todos los códigos ya que aporta un gran potencial a la hora de crear funciones comunes para objetos. Dominarla es esencial si escribes tu código bajo ES6.  
+Esta función la vamos a ver en todos los códigos ya que aporta un gran potencial a la hora de crear funciones comunes para objetos. Dominarla es esencial si escribes tu código bajo **ES6**.  
 
 Contamos con **Template Literals**, que nos permite concatenar diversas lineas y variables. Siempre van envueltas con **tildes invertidas** y las variables en el interior de **${ }**, pudiendo hacer cualquier operación con ellas:
 
@@ -244,7 +244,7 @@ Utiliza los métodos **onSucces** y **onFailure** donde indicaremos que debe hac
 
 Puedes encontrar más información en [aqui](http://jamesknelson.com/grokking-es6-promises-the-four-functions-you-need-to-avoid-callback-hell/).
 
-Con la **extensión array** podemos mostrar el interior de un array o re asignar sus parámetros solo introduciendo tres puntos al principio(...array). Podemos mostrarla por pantalla sin la necesidad de ningún bloque, también añadir nuevos elementos sin la necesidad de utilizar **.push**:
+Con la **extensión array** podemos mostrar el interior de un array o re asignar sus parámetros solo introduciendo tres puntos al principio(...array). Podemos mostrarla por pantalla sin la necesidad de ningún bucle, también añadir nuevos elementos sin la necesidad de utilizar **.push**:
 
 ```
 var parts = ['shoulders', 'knees']; 
@@ -254,9 +254,9 @@ var lyrics = ['head', ...parts, 'and', 'toes'];
 
 Como puedes comprobar, a la segunda variable hemos añadido diferentes elementos, incluido una propagación de la primera, por eso incluye todas las variables.  
 
-Una de las ventajas más significantes de ES6 es su nueva **gestión de archivos imoprt & export**. Mejora su sintaxis facilitando la importación y exportación de bibliotecas, clases, partes del código... También podemos agregar accesos a directorios en nuestra app.
+Una de las ventajas más significantes de **ES6** es su nueva **gestión de archivos imoprt & export**. Mejora su sintaxis facilitando la importación y exportación de bibliotecas, clases, partes del código... También podemos agregar accesos a directorios en nuestra app.
 
-Hasta aquí esta guía de ES6.  
+Hasta aquí esta guía de **ES6**.  
 
 **A tope con @mentoringJS!  
 Jordi Gomper.**
