@@ -7,6 +7,8 @@ categories: articulo
 
 Hola chicos! En este articulo quiero repasar las mejoras más importantes que trae **ES6**.  
 
+[Aprende Javascript con MentoringJS - Step 11](http://mentoringjs.com/)  
+
 Cada versión que nos ofrece ESCM encontramos facilidad ya sea en el código, en nuevas funciones, nuevas variables... Esta vez, **ES6** viene cargado de novedades que nos va a ayudar nuestro día a día.  
 
 >ES6 son los reyes magos...  
@@ -157,7 +159,7 @@ for (var i = 0; i != users.length; i++){
 
 Ahora vamos a ver los objetos creados a partir de **new Map** que perfectamente puede complementarse con el control de objetos en bucles que ya hemos visto.  
 
-Map es un objeto que contiene las parejas key/value. Se puede crear desde cero y añadir el contenido con la propiedad **.set** o obtener los valores key/value con **.get** y también se puede crear una replica de un objeto o array ya existente.  
+Map es un objeto que contiene las parejas key/value. Se puede crear desde cero y añadir el contenido con la propiedad **.set** o obtener los valores key/value con **.get** y también se puede crear una replica de un objeto ya existente.  
 
 La principal característica es que puedes asignar cualquier valor (valores primitivos, funciones) como key o value transformándolos en string. Permite la comparación de los 2 valores, pudiendo saber por ejemplo si una clave contiene una función.
 
