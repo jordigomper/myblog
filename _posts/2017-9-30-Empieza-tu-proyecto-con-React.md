@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Buenos habitos con React
+title: Buenos hábitos con React
 img: blog/i_des.png
 categories: articulo
 ---
@@ -18,12 +18,12 @@ Ahora... al turrón!
 ## Componentes React
 Cuando empezamos con un proyecto, antes de abrir nuestro editor de texto es importante dibujar sobre papel todas las diferentes partes que contiene.  
 
-Por ejemplo, empezaremos desde la página principal, dibujando las diferentes partes que las componen y luego, hacemos los mismos con esas pequeñas partes, cada vez dibujaremos partes mas y mas pequeñas hasta que ya no se pueda descomponer más, por ejemplo, si estamos descomponiendo un muro que va a contener nuestra página principal, acabaríamos con el botón enviar o algo por el estilo.  
+Por ejemplo, empezaremos desde la página principal, dibujando las diferentes partes que las componen y luego, hacemos los mismos con esas pequeñas partes, cada vez dibujaremos partes más y más pequeñas hasta que ya no se pueda descomponer más, por ejemplo, si estamos descomponiendo un muro que va a contener nuestra página principal, acabaríamos con el botón enviar o algo por el estilo.  
 
 Cada parte que hemos dibujado hasta el nivel más bajo, va a ser un componente React y normalmente, puede que se convierta en un componente contenedor que procesara información enviada dependiendo en que lugar se encuentre. Si subimos para arriba, encontraremos componentes de estilo. Estos componentes se encargan de agrupar otros componentes dando forma a una interfaz de usuario y en ocasiones, enviando información a los componentes contenedores.  
 
 Aqui tienes un ejemplo: 
-![twitter](https://jordigomper.github.io/myblog/img/a_manual_desc/twitter2.PNG "twitter")  
+![twitter](https://jordigomper.github.io/myblog/img/a_manual_desc/twitter2.png "twitter")  
 
 Al componente que contiene toda la información como es la imagen, el titulo y el texto le vamos a llamar **SimpleCard** y es un componente de estilo. Se encarga de agrupar componentes más pequeños y darle forma. En este caso también pasa información, por ejemplo, donde se encuentra la foto al componente imagen.  
 
