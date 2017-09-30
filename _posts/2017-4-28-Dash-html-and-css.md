@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Curso Dash HTML y CSS 
+img: i_html-css.jpeg
 categories: html&css
 ---
 [Aprende Javascript con MentoringJS - Step 3](http://mentoringjs.com/)  

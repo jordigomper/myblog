@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Guía como empezar con JavaScript.
+img: blog/i_js.png
 categories: javascript
 ---
 [Aprende Javascript con MentoringJS - Step 2](http://mentoringjs.com/)  
