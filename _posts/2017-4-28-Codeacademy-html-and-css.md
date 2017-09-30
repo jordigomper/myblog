@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Curso Codeacademy HTML y CSS
-img: i_html-css.jpg
+img: blog/i_html-css.jpg
 categories: html&css
 ---
 [Aprende Javascript con MentoringJS - Step 3](http://mentoringjs.com/)  

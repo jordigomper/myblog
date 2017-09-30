@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Controlador de versiones Git.
-img: i_git.png
+img: blog/i_git.png
 categories: herramientas
 ---
 [Aprende Javascript con MentoringJS - Step 2](http://mentoringjs.com/)  
