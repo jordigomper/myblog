@@ -256,7 +256,16 @@ var lyrics = ['head', ...parts, 'and', 'toes'];
 
 Como puedes comprobar, a la segunda variable hemos añadido diferentes elementos, incluido una propagación de la primera, por eso incluye todas las variables.  
 
-Una de las ventajas más significantes de **ES6** es su nueva **gestión de archivos imoprt & export**. Mejora su sintaxis facilitando la importación y exportación de bibliotecas, clases, partes del código... También podemos agregar accesos a directorios en nuestra app.
+Una de las ventajas más significantes de **ES6** es su nueva **gestión de archivos imoprt & export**. Mejora su sintaxis facilitando la importación y exportación de bibliotecas, clases, partes del código... También podemos agregar accesos a directorios en nuestra app.  
+
+También podemos configurar directorios por defecto utilizando **NODE_PATH**:
+```
+// importando
+import Thing from '../../components/Thing'
+```
+
+Para configurar las importaciones personalizadas, vamos a ir al archivo package.json y buscar la linea **"start": "react-scripts start"** y vamos a substituirla por **"start": "NODE_PATH=src:src/components:src/containers react-scripts start"**. Separando con dos puntos (:) cuando queremos poner más de un direcotrio. Con esta operación ya tenemos rutas para components y containers.
+
 
 Hasta aquí esta guía de **ES6**.  
 
