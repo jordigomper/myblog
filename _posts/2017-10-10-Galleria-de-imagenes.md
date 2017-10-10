@@ -11,7 +11,7 @@ Hola chi@S! Hoy traigo los pasos para crear una galería de imágenes con React.
 
 Para crear la galería vamos a utilizar [bootstrap 3](http://getbootstrap.com/) para su diseño responsive en diferentes navegadores, [font awesome](http://fontawesome.io/) para los iconos y [normalize](http://necolas.github.io/normalize.css/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BloKgz4hXQWGzOHMvH40r6w%3D%3D) para que el css cumpla con un standar del css. Al lio!  
 
-![galeria con react.js]( https://jordigomper.github.io/myblog/img/gif/galeria_imagenes.GIF)
+![galeria con react.js]( https://jordigomper.github.io/myblog/img/gif/galeria_imagenes.gif)
 
 Desde la herramienta **create-react-app** creamos nuestro nuevo proyecto.  
 
@@ -138,11 +138,11 @@ this.state = {
 }
 ```
 
-Aquí encontramos la primera particularidad. Mientras que showModal tenga el valor de false, no va a mostrar en el navegador el componente GalleryModal ya que este componente solo se tiene que visualizar cuando se hace click sobre una imagen. Más adelante, dentro del componente GalleryModal veremos como.  
+Aquí encontramos la primera particularidad. Mientras que showModal tenga el valor de false, **no va a mostrar en el navegador** el componente GalleryModal ya que este componente solo se tiene que visualizar cuando se hace click sobre una imagen. Más adelante, dentro del componente GalleryModal veremos como.  
 
 Dentro de render, devolvemos diferentes elementos div que hacen de contenedor para las imágenes en miniatura. Cada imagen ira envuelta en otro div para tener un contenedor personal, esto sirve a la hora de posicionar el icono de ampliar.  
 
-Llamo al array que contiene todas las urls de las imágenes con el componente GalleryImage. Paso por props la url de la imagen y justo debajo desde un span se coloca la llamada al icono de expandir y un gestor de eventos. Este gestor de eventos pasa por referencia la función OpenModal, que se encarga de cambiar el estado de showModal por true y url por el valor de la imagen seleccionada, mostrándola desde el componente GalleryModal que ya se muestra por el navegador.
+Llamo al array que contiene todas las urls de las imágenes con el componente **GalleryImage**. Paso por props la url de la imagen y justo debajo desde un span se coloca la llamada al icono de expandir y un gestor de eventos. Este gestor de eventos pasa por referencia la función **OpenModal**, que se encarga de cambiar el estado de showModal por true y url por el valor de la imagen seleccionada, mostrándola desde el componente **GalleryModal** que ya se muestra por el navegador.
 
 ```
 // llamada al componente y span con el icono
@@ -159,9 +159,9 @@ openModal = (url) => {
 }
 ```
 
-Fuera del contenedor de la galería se encuentra el componente GalleryModal. A este componente le envío por props el valor del estado de showModal y url, permitiendo la renderización y mostrando la imagen desde el url que le envío.  
+Fuera del contenedor de la galería se encuentra el componente **GalleryModal**. A este componente le envío por props el valor del estado de showModal y url, permitiendo la renderización y mostrando la imagen desde el url que le envío.  
 
-También incluye por referencia la función closeModal que se incorporara al icono de cerrar de la imagen ampliada y que al pulsar cambiara el estado del componente Gallery por showModal false y url indefinida volviendo a evitar que el componente se visualice por el navegador.  
+También incluye por referencia la función **closeModal** que se incorporara al icono de cerrar de la imagen ampliada y que al pulsar cambiara el estado del componente Gallery por showModal false y url indefinida **volviendo a evitar que el componente se visualice** por el navegador.  
 
 ```
 closeModal = () => {
@@ -246,9 +246,9 @@ Aquí el componente más peculiar de la aplicación. Vamos a ver el ciclo de vid
 
 Este componente necesita tener estado para cambiar de imagen sin tener que renderizar toda la aplicación. Primero he creado un constructor donde inicia la variable src en indefinida.  
 
-Pasamos a componentWillReceiveProps(). Este componente solo se ejecuta cuando detecta que algún props recibido desde el componente padre, a cambiado. Si no contiene este ciclo de vida, al pulsar una imagen mostraría el componente vacío ya que no se ha vuelto a renderizar y no asignaría la nueva url en el estado. Así que cuando detecta un cambio de props se ejecuta.  
+Pasamos a **componentWillReceiveProps()**. Este método **solo se ejecuta cuando detecta que algún props recibido desde el componente padre a cambiado**. Si no contiene este ciclo de vida, al pulsar una imagen mostraría el componente vacío ya que no se ha vuelto a renderizar y no asignaría la nueva url en el estado. Así que cuando detecta un cambio de props se ejecuta.  
 
-El problema que tiene este método, es que si utilizo this.setState dentro del directamente sin ninguna condición, entra en bucle permanente. Como siempre que se muestre por pantalla va a tener una url de la imagen seleccionada, con una condición if evito que entre entre en bucle, ya que una vez asignada la url al estado src, no puede entrar más.  
+El problema que tiene este método, es que **si utilizo this.setState dentro del directamente sin ninguna condición, entra en bucle permanente**. Como siempre que se muestre por pantalla va a tener una url de la imagen seleccionada, con una condición if evito que entre entre en bucle, ya que una vez asignada la url al estado src, no puede entrar más.  
 
 ```
 componentWillReceiveProps(nextProps){
@@ -270,9 +270,9 @@ if(this.props.isOpen === false) {
 
 Dentro, un contenedor div para todos los elementos. Esto sirve para poder posicionar los diferentes iconos sobre la imagen.  
 
-El icono de cerrar incorpora la función pasada por referencia closeModal para cerrar la imagen.  
+El icono de cerrar incorpora la función pasada por referencia **closeModal** para cerrar la imagen.  
 
-Los elementos span con className='card-arrow-...' contienen los iconos de flechas para desplazarnos por las diferentes imágenes sin la necesidad de tener que volver a la galería. Incorporan la función changeImage, antes de comentar la función vamos a ver como paso la url de la imagen posicionada el la dirección de la flecha seleccionada.  
+Los elementos span con className='card-arrow-...' contienen los iconos de flechas para desplazarnos por las diferentes imágenes sin la necesidad de tener que volver a la galería. Incorporan la función **changeImage**, antes de comentar la función vamos a ver como paso la url de la imagen posicionada el la dirección de la flecha seleccionada.  
 
 Dentro de los parámetros que le envío a la función se encuentra lo siguiente:
 
@@ -282,7 +282,7 @@ this.props.imgUrls[this.props.imgUrls.indexOf(this.state.src)+1/-1])
 
 Lo que consigo con esto es desde el método de JS indexOf busco el indice que ocupa la url actual y dependiendo la flecha seleccionada sumo o resto una posición. Esto devuelve la url de la imagen del lado seleccionado y lo envía al método.  
 
-Dentro del método changeImage, lo primero que hago es comprobar que el valor recibido no es undefined. Cuando pasamos el primer elemento de la array en dirección contraria, es decir, a la izquierda o cuando pasamos las posiciones totales del array, enviamos una url undefinied y no muestra ninguna imagen. Esto evita que pase eso, parando la imagen siempre en la primera y ultima posición.  
+Dentro del método **changeImage**, lo primero que hago es comprobar que el valor recibido no es undefined. Cuando pasamos el primer elemento de la array en dirección contraria, es decir, a la izquierda o cuando pasamos las posiciones totales del array, **enviamos una url undefinied** y no muestra ninguna imagen. Esto evita que pase eso, parando la imagen siempre en la primera y ultima posición.  
 
 Si la condición se cumple, se actualiza el estado con la nueva url pasada, renderizando el componente y mostrando la nueva imagen por pantalla.  
 
