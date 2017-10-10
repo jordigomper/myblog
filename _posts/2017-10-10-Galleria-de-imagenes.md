@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creando una galeria de imagenes
-img: blog/gallery.PNG
+img: blog/i_gallery.PNG
 categories: app
 ---
 
@@ -140,9 +140,9 @@ this.state = {
 
 Aquí encontramos la primera particularidad. Mientras que showModal tenga el valor de false, no va a mostrar en el navegador el componente GalleryModal ya que este componente solo se tiene que visualizar cuando se hace click sobre una imagen. Más adelante, dentro del componente GalleryModal veremos como.  
 
-Dentro de render, devolvemos diferentes elementos div que hacen de contenedor para las imagenes en miniatura. Cada imagen ira envuelta en otro div para tener un contenedor personal, esto sirve a la hora de posicionar el icono de ampliar.  
+Dentro de render, devolvemos diferentes elementos div que hacen de contenedor para las imágenes en miniatura. Cada imagen ira envuelta en otro div para tener un contenedor personal, esto sirve a la hora de posicionar el icono de ampliar.  
 
-Llamo al array que contiene todas las urls de las imágenes con el componente GalleryImage. Paso por props la url de la imagen y justo debajo desde un span se coloca la llamada al icono de expandir y un gestor de eventos. Este gestor de eventos pasa por referencia la función OpenModal, que se encarga de cambiar el estado de showModal por true y url por el valor de la imagen seleccionada, mostrandola desde el componente GalleryModal que ya se muestra por el navegador.
+Llamo al array que contiene todas las urls de las imágenes con el componente GalleryImage. Paso por props la url de la imagen y justo debajo desde un span se coloca la llamada al icono de expandir y un gestor de eventos. Este gestor de eventos pasa por referencia la función OpenModal, que se encarga de cambiar el estado de showModal por true y url por el valor de la imagen seleccionada, mostrándola desde el componente GalleryModal que ya se muestra por el navegador.
 
 ```
 // llamada al componente y span con el icono
