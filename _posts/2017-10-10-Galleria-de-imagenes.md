@@ -286,9 +286,19 @@ Dentro del método **changeImage**, lo primero que hago es comprobar que el valo
 
 Si la condición se cumple, se actualiza el estado con la nueva url pasada, renderizando el componente y mostrando la nueva imagen por pantalla.  
 
-Después de crear la galería, he creado una versión estática y la he subido a surge con las ultimas aventuras que he vivido con mis amigos, lo siguiente, se las he enseñado, aun están flipando!  
+```
+changeImage = (url) => {
+    if(url !== undefined){
+        this.setState({
+            src: url
+        })
+    }
+}
+```
 
-Puedes ver el resultado en el siguiente (link)[http://localhost:3000/]. Si todavía no has leído mi articulo de como subir tu aplicación en surge, aquí te dejo el (link)[2017-9-11-Deployar-con-Surge.md].
+Después de crear la galería, he creado una versión estática y la he subido a surge con las ultimas aventuras que he vivido con mis amigos, lo siguiente, se las he enseñado, han flipado!  
+
+Puedes ver el resultado en el siguiente [link](http://jgomper-gallery.surge.sh/). Si todavía no has leído mi articulo de como subir tu aplicación en surge, aquí te dejo el [link](2017-9-11-Deployar-con-Surge.md).
 
 Hasta aquí este articulo. Ya tienes los conocimientos básicos para crear una galería y dejar boquiabiertos a todos tus amigos subiendo las fotos del ultimo verano, a que esperas?
 
