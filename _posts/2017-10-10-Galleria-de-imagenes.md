@@ -248,7 +248,7 @@ Este componente necesita tener estado para cambiar de imagen sin tener que rende
 
 Pasamos a **componentWillReceiveProps()**. Este método **solo se ejecuta cuando detecta que algún props recibido desde el componente padre a cambiado**. Si no contiene este ciclo de vida, al pulsar una imagen mostraría el componente vacío ya que no se ha vuelto a renderizar y no asignaría la nueva url en el estado. Así que cuando detecta un cambio de props se ejecuta.  
 
-El problema que tiene este método, es que **si utilizo this.setState dentro del directamente sin ninguna condición, entra en bucle permanente**. Como siempre que se muestre por pantalla va a tener una url de la imagen seleccionada, con una condición if evito que entre entre en bucle, ya que una vez asignada la url al estado src, no puede entrar más.  
+El problema que tiene este método, es que **si utilizo this.setState dentro de el directamente sin ninguna condición, entra en bucle permanente**. Como siempre que se muestre por pantalla va a tener una url de la imagen seleccionada, con una condición if evito que entre entre en bucle, ya que una vez asignada la url al estado src, no puede entrar más.  
 
 ```
 componentWillReceiveProps(nextProps){
@@ -272,7 +272,7 @@ Dentro, un contenedor div para todos los elementos. Esto sirve para poder posici
 
 El icono de cerrar incorpora la función pasada por referencia **closeModal** para cerrar la imagen.  
 
-Los elementos span con className='card-arrow-...' contienen los iconos de flechas para desplazarnos por las diferentes imágenes sin la necesidad de tener que volver a la galería. Incorporan la función **changeImage**, antes de comentar la función vamos a ver como paso la url de la imagen posicionada el la dirección de la flecha seleccionada.  
+Los elementos span con className='card-arrow-...' contienen los iconos de flechas para desplazarnos por las diferentes imágenes sin la necesidad de tener que volver a la galería. Incorporan la función **changeImage**, antes de comentar la función vamos a ver como paso la url de la imagen posicionada en la dirección de la flecha seleccionada.  
 
 Dentro de los parámetros que le envío a la función se encuentra lo siguiente:
 
@@ -280,7 +280,7 @@ Dentro de los parámetros que le envío a la función se encuentra lo siguiente:
 this.props.imgUrls[this.props.imgUrls.indexOf(this.state.src)+1/-1])
 ```
 
-Lo que consigo con esto es desde el método de JS indexOf busco el indice que ocupa la url actual y dependiendo la flecha seleccionada sumo o resto una posición. Esto devuelve la url de la imagen del lado seleccionado y lo envía al método.  
+Lo que consigo con esto es desde el método de JS **indexOf busco el indice que ocupa la url actual** y dependiendo la flecha seleccionada sumo o resto una posición. Esto genera un numero con la posición deseada y envía al método la url en el interior de imgUrls con la posición indicada.  
 
 Dentro del método **changeImage**, lo primero que hago es comprobar que el valor recibido no es undefined. Cuando pasamos el primer elemento de la array en dirección contraria, es decir, a la izquierda o cuando pasamos las posiciones totales del array, **enviamos una url undefinied** y no muestra ninguna imagen. Esto evita que pase eso, parando la imagen siempre en la primera y ultima posición.  
 
