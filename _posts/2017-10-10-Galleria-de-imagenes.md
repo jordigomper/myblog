@@ -7,11 +7,14 @@ categories: app
 
 Hola chi@S! Hoy traigo los pasos para crear una galería de imágenes con React.js, va a quedar chulissima en vuestras aplicaciones.
 
-[Aprende Javascript con MentoringJS - Step 12](http://mentoringjs.com/)
+[Aprende Javascript con MentoringJS - Step 12](http://mentoringjs.com/)  
+
+Puedes descargar la galería desde [aquí](https://github.com/jordigomper/image_gallery_React)  
+
+![galeria con react.js]( https://jordigomper.github.io/myblog/img/gif/galeria_imagenes.gif)  
 
 Para crear la galería vamos a utilizar [bootstrap 3](http://getbootstrap.com/) para su diseño responsive en diferentes navegadores, [font awesome](http://fontawesome.io/) para los iconos y [normalize](http://necolas.github.io/normalize.css/?lipi=urn%3Ali%3Apage%3Ad_flagship3_pulse_read%3BloKgz4hXQWGzOHMvH40r6w%3D%3D) para que el css cumpla con un standar del css. Al lio!  
 
-![galeria con react.js]( https://jordigomper.github.io/myblog/img/gif/galeria_imagenes.gif)
 
 Desde la herramienta **create-react-app** creamos nuestro nuevo proyecto.  
 
