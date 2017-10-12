@@ -9,7 +9,7 @@ Hola chi@S! Hoy traigo los pasos para crear una galería de imágenes con React.
 
 [Aprende Javascript con MentoringJS - Step 12](http://mentoringjs.com/)  
 
-Puedes descargar la galería desde [aquí](https://github.com/jordigomper/image_gallery_React)  
+Puedes descargar la galería desde [aquí](https://github.com/jordigomper/image_gallery_React).  
 
 ![galeria con react.js]( https://jordigomper.github.io/myblog/img/gif/galeria_imagenes.gif)  
 
