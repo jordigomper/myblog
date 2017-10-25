@@ -1,3 +1,4 @@
+---
 layout: post
 title: Home de Netflix
 img: blog/i_net.PNG
