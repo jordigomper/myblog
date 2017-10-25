@@ -14,7 +14,7 @@ Puedes encontrar la aplicación en [Github](https://github.com/jordigomper/netfl
 
 Las consultas la vamos hacer sobre la API que nos ofrece [themoviedb](https://www.themoviedb.org/documentation/api) que tiene una extensa base de datos de películas. Para hacer las peticiones necesitamos una key, para obtenerla puedes registrarte y pulsando sobre la imagen de perfil selecciona settings y API.  
 
-<div align="center"><iframe src="https://github.com/jordigomper/netflix-con-react" width=450 height=250 frameborder=1 scrolling=auto></iframe></div>
+<iframe src="https://github.com/jordigomper/netflix-con-react" width=450 height=250 frameborder=1 scrolling=auto></iframe>
 
 Ahora voy a enseñar un breve resumen de los diferentes componentes:
 
