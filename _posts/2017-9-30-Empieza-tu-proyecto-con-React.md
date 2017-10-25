@@ -150,7 +150,7 @@ Vamos a modificar la estructura que crea la herramienta create-react-app y aunqu
 * **index.js** es el archivo donde iniciamos la aplicación llamando a ReactDom.render. Este archivo es mejor tenerlo en el directorio raiz.
 * Dentro de **utils** vamos a incorporar las diversas funciones como manejadores de error, formateadores y similares. Cuando los necesitemos vamos a saber donde se encuentran.  
 
-Cuando necesitemos importar cualquier archivo vamos a saber donde se encuentra y utilizando los diferentes métodos de los que hemos hablado en el (articulo anterior)[https://jordigomper.github.io/myblog/articulo/2017/09/22/Novedades-ES6.html], podemos crear directorios personalizados.  
+Cuando necesitemos importar cualquier archivo vamos a saber donde se encuentra y utilizando los diferentes métodos de los que hemos hablado en el [articulo anterior](https://jordigomper.github.io/myblog/articulo/2017/09/22/Novedades-ES6.html), podemos crear directorios personalizados.  
 
 Aquí acaba el articulo. Recuerda que es muy importante seguir la metodología de la que he hablado en este articulo, esto te ayudara a optimizar el rendimiento del código y te facilitara el trabajo.  
 
