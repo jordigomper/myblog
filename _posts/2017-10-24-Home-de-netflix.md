@@ -14,7 +14,8 @@ Puedes encontrar la aplicación en [Github](https://github.com/jordigomper/netfl
 
 Las consultas la vamos hacer sobre la API que nos ofrece [themoviedb](https://www.themoviedb.org/documentation/api) que tiene una extensa base de datos de películas. Para hacer las peticiones necesitamos una key, para obtenerla puedes registrarte y pulsando sobre la imagen de perfil selecciona settings y API.  
 
-<iframe src="http://jgomper-netflix.surge.sh/" frameborder="0" id="mainPageBody" width="1080px" height="1080px"></iframe>
+<div><iframe src="http://jgomper-netflix.surge.sh/" frameborder="0" id="mainPageBody" width="480px" height="480px"></iframe></div>
+
 
 
 Ahora voy a enseñar un breve resumen de los diferentes componentes:
