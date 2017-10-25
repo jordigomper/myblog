@@ -1,6 +1,6 @@
 layout: post
 title: Home de Netflix
-img: blog/i_es6.jpg
+img: blog/i_net.PNG
 categories: articulo
 ---
 
