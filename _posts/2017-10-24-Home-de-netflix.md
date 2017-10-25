@@ -8,7 +8,7 @@ Hola chic@s! En este articulo voy a hacer una replica del home de la famosa Netf
 
 ## [Aprende Javascript con MentoringJS - Step 13](http://mentoringjs.com/)  
 
-Basandome en el articulo de [Sophia Shoemaker y Jack Oliver](https://www.fullstackreact.com/react-daily-ui/003-landing-page/). A diferencia de la fuente, mi home de Netflix está estructurado bajo ESCM6.  
+Basándome en el articulo de [Sophia Shoemaker y Jack Oliver](https://www.fullstackreact.com/react-daily-ui/003-landing-page/). A diferencia de la fuente, mi home de Netflix está estructurado bajo ESCM6.  
 
 Puedes encontrar la aplicación en [Github](https://github.com/jordigomper/netflix-con-react) y ver su funcionamiento en [Surge](http://jgomper-netflix.surge.sh/).  
 
