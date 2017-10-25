@@ -15,7 +15,7 @@ Puedes encontrar la aplicación en [Github](https://github.com/jordigomper/netfl
 
 Las consultas la vamos hacer sobre la API que nos ofrece [themoviedb](https://www.themoviedb.org/documentation/api) que tiene una extensa base de datos de películas. Para hacer las peticiones necesitamos una key, para obtenerla puedes registrarte y pulsando sobre la imagen de perfil selecciona settings y API.  
 
-<p data-height="800"  data-with="600"data-theme-id="0" data-slug-hash="qPzwJa" data-default-tab="result" data-user="JordiGomper" data-embed-version="2" data-pen-title="Netflix React" class="codepen">See the Pen <a href="https://codepen.io/JordiGomper/pen/qPzwJa/">Netflix React</a> by Jordi (<a href="https://codepen.io/JordiGomper">@JordiGomper</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="800" data-theme-id="0" data-slug-hash="qPzwJa" data-default-tab="result" data-user="JordiGomper" data-embed-version="2" data-pen-title="Netflix React" class="codepen">See the Pen <a href="https://codepen.io/JordiGomper/pen/qPzwJa/">Netflix React</a> by Jordi (<a href="https://codepen.io/JordiGomper">@JordiGomper</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> 
 
 Ahora voy a enseñar un breve resumen de los diferentes componentes:  
