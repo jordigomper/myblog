@@ -1,3 +1,10 @@
+---
+layout: post
+title: React + react-router + Firebase
+img: blog/i_fire.PNG
+categories: articulo
+---
+
 # React.js, react-route y Firebase
 ## [Aprender javascript con MentoringJS.](http://mentoringjs.com)
 ### React y firebase ejemplo práctico
