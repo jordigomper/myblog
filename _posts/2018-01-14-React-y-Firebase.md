@@ -8,7 +8,7 @@ categories: articulo
 
 ## [Aprender javascript con MentoringJS.](http://mentoringjs.com)  
 
-### React y firebase ejemplo práctico  
+### React, react-router y firebase ejemplo práctico  
 
 
 Hola chic@s!! Os traigo un articulo sobre una pequeña app que combina React.js, react router y firebase. Una combinación perfecta para nuestras app.  
@@ -44,7 +44,7 @@ Vamos a la [web de firebase](https://firebase.google.com/) y nos creamos una cue
 
 Lo primero que vas a hacer es ir a la pestaña del menú de la izquierda Database y vas a crear una. Una vez creada, vete a la pestaña que esta en la parte superior de la pantalla principal **REGLAS** y tienes que substituir las exclamaciones de **read y write** por igualación:  
 
-![reglas firebase](https://jordigomper.github.io/myblog/img/a-firebase/reglas.png)  
+![reglas firebase](https://jordigomper.github.io/myblog/img/a-firebase/reglas.PNG)  
 
 Esto permite leer y escribir en la base de datos sin necesidad de estar logeado en la aplicación. Ahora ya lo tienes todo listo para empezar a utilizarla.
 
