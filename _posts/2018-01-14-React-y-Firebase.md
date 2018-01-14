@@ -15,16 +15,16 @@ Puedes encontrar el resultado de este articulo subido en [surge](http://jgomper-
 
 ### ¿Que es Firebase?
 Firebase ofrece un conjunto de herramientas que hacen más fácil el desarrollo de nuestras apps.  
-Ofrece servicios como base de datos a tiempo real, autenticación con gmail, facegook, registro con email... Un almacenamiento para las apps que necesitan guardar archivos del usuario incluso un servicio hosting entre un gran etc etc...  
+Ofrece servicios como base de datos a tiempo real, autentificar con gmail, facegook, registro con email... Un almacenamiento para las apps que necesitan guardar archivos del usuario incluso un servicio hosting entre un gran etc etc...  
 
 ### ¿Que es react-router?
-Es una librería que permite gestionar las rutas de una aplicación que utilize React.  
+Es una librería que permite gestionar las rutas de una aplicación que utilice React.  
   
 ### Primer paso.
 
 Empezamos abriendo la consola y creando la estructura para trabajar en local gracias al paquete [create-react-app](https://jordigomper.github.io/myblog/react.js/2017/08/04/React-analizando-su-estructura.html#instalaci%C3%B3n). Entramos dentro del nuevo directorio y ejecutamos nuestra app con **npm start**.  
 
-Para nuesta applicación vamos a seguir la estructura que ya he mencionado en un [articulo anterior](https://jordigomper.github.io/myblog/articulo/2017/09/30/Empieza-tu-proyecto-con-React.html) en el apartado de **Estructuando un proyecto**. Basicamente dentro de la carpeta src vamos a crear una carpeta llamada components para nuestros componentes simples y otra llamada container con los componentes con la lógica de la aplicación. Tiene que tener la siguiente estructura:  
+Para nuestra aplicación vamos a seguir la estructura que ya he mencionado en un [articulo anterior](https://jordigomper.github.io/myblog/articulo/2017/09/30/Empieza-tu-proyecto-con-React.html) en el apartado de **Estructurando un proyecto**. Básicamente dentro de la carpeta src vamos a crear una carpeta llamada components para nuestros componentes simples y otra llamada container con los componentes con la lógica de la aplicación. Tiene que tener la siguiente estructura:  
   
 ![directorio](../img/a-firebase/directorio.png)  
 
@@ -32,7 +32,7 @@ Ahora vamos a seguir los siguientes pasos para instalar react-router y firebase.
 
 ### Instalando react-router.
 
-Ahora vamos a instalar la libreria que nos va a permitir crear las rutas para nuestros diferentes apartados. Desde la consola cmd utilizando el controlador de paquetes [npm](https://github.com/jordigomper/recursos/blob/master/node.md) vamos a ir al directorio principal de nuesta app y vamos a introducir el siguiente comando: **npm install --save react-router-dom**. Ahora ya tenemos instalado react-router en su ultima versión (v4).  
+Ahora vamos a instalar la librería que nos va a permitir crear las rutas para nuestros diferentes apartados. Desde la consola cmd utilizando el controlador de paquetes [npm](https://github.com/jordigomper/recursos/blob/master/node.md) vamos a ir al directorio principal de nuestra app y vamos a introducir el siguiente comando: **npm install --save react-router-dom**. Ahora ya tenemos instalado react-router en su ultima versión (v4).  
 
 ### Instalando firebase.
 
@@ -40,7 +40,7 @@ Para instalar firebase seguimos los mismos pasos, desde el directorio principal 
 
 Vamos a la [web de firebase](https://firebase.google.com/) y nos creamos una cuenta. Una vez registrado, en la parte superior derecha presiona la opción **IR A LA CONSOLA**. Una vez dentro pulsa añadir proyecto y crea un proyecto. Bienvenido a tu panel de control donde vas a poder gestionar tu base de datos a tiempo real.  
 
-Lo primero que vas a hacer es ir a la pestaña del menu de la izquierda Database y vas a crear una. Una vez creada, vete a la pestaña que esta en la parte superior de la pantalla principal **REGLAS** y tienes que substituir las exclamaciones de **read y write** por igualación:  
+Lo primero que vas a hacer es ir a la pestaña del menú de la izquierda Database y vas a crear una. Una vez creada, vete a la pestaña que esta en la parte superior de la pantalla principal **REGLAS** y tienes que substituir las exclamaciones de **read y write** por igualación:  
 
 ![reglas firebase](../img/a-firebase/reglas.png)  
 
@@ -71,9 +71,9 @@ export default firebase;
   
 Antes de empezar lo primero es crear el este objeto que contiene toda la configuración para que nuestra app pueda comunicarse con firebase.  
   
-Copia este componente tal cual, después, vete a la consola de la web de firebase, haz click en **Project Overview** arriba a la izquierda, seleciona **Añade Firebase a tu aplicación** en la pantalla principal y copia el objeto config y pegalo subsituyendo el de este componente.  
+Copia este componente tal cual, después, vete a la consola de la web de firebase, haz click en **Project Overview** arriba a la izquierda, selecciona **Añade Firebase a tu aplicación** en la pantalla principal y copia el objeto config y pegalo substituyendo el de este componente.  
   
-Con esto ya tienes la conexion a firebase.
+Con esto ya tienes la conexión a firebase.
   
 ### index.js
 ```
@@ -95,9 +95,9 @@ ReactDOM.render(
 registerServiceWorker();
 ```
 
-Este és el index de la aplicación, voy a comentarlo de arriba a abajo. Primero importamos los diferentes modulos que vamos a utilizar y entre ellos encontramos **BrowserRouter** que ahora voy a hablar sobre él y los diferentes componentes y css.  
-Dentro de la función ReactDOM.render se encuentra el componente BrowserRouter que esta importadod esde el módulo de react-router-dom. Siempre desde el comienzo de una aplicación que utilize react-router se tiene que determinar que enrutador usar. Para aplicaciones dinamicas hay que utilizar **BrowserRouter** envolviendo el componente principal.  
-En este caso vamos a suponer que nuesa aplicación va a estar en un servidor dinamico, envolviendo el componente Routes que es el que se encarga de mostrar las diferentes rutas.  
+Este es el index de la aplicación, voy a comentarlo de arriba a abajo. Primero importamos los diferentes módulos que vamos a utilizar y entre ellos encontramos **BrowserRouter** que ahora voy a hablar sobre él y los diferentes componentes y css.  
+Dentro de la función ReactDOM.render se encuentra el componente BrowserRouter que esta importado desde el módulo de react-router-dom. Siempre desde el comienzo de una aplicación que utilice react-router se tiene que determinar que enrutador usar. Para aplicaciones dinamicas hay que utilizar **BrowserRouter** envolviendo el componente principal.  
+En este caso vamos a suponer que nuestra aplicación va a estar en un servidor dinámico, envolviendo el componente Routes que es el que se encarga de mostrar las diferentes rutas.  
  
 #### routes.js
 
@@ -119,11 +119,11 @@ const Routes = () => (
 
 export default Routes;
 ```
-Este componente se encarga de gestionar las diferentes rutas y las muestra por pantalla. Es un componente simple y no lo esta alojado en la carpeta components ya que realmente no funciona como un componente que mueste información o estilo, asi que mejor dejarlo en el directorio principal.  
+Este componente se encarga de gestionar las diferentes rutas y las muestra por pantalla. Es un componente simple y no lo esta alojado en la carpeta components ya que realmente no funciona como un componente que muestre información o estilo, así que mejor dejarlo en el directorio principal.  
   
 La etiqueta **&lt;Switch&gt;** sirve para agrupar las diferentes rutas. Iterará por ellas y solo representará la primera que coincida con el nombre actual de la ruta.  
   
-En este caso hay dos rutas compuestas por el componente **&lt;Route&gt;**. Funciona como enrutador y con él creamos las diferentes rutas. Con el atributo **path** indicamos en que ruta debe mostrar el componente indicado en **component**. En este caso he colocado **addpost** como primera rutao por que de la otra manera siempre mostraria el componente **App** que esta indicado como principal **"/"** ya que coincide con todas.  
+En este caso hay dos rutas compuestas por el componente **&lt;Route&gt;**. Funciona como enrutador y con él creamos las diferentes rutas. Con el atributo **path** indicamos en que ruta debe mostrar el componente indicado en **component**. En este caso he colocado **addpost** como primera ruta por que de la otra manera siempre mostraría el componente **App** que esta indicado como principal **"/"** ya que coincide con todas.  
   
 ### App.js
 ```
@@ -171,11 +171,11 @@ class App extends Component {
 export default App;
 ```
 
-Este componente se encarga de conectaro con firebase y mostrar los datos alojados, en este caso simula un muro donde puedes dar a me gusta o no me gusta a una publicación.  
+Este componente se encarga de conectar con firebase y mostrar los datos alojados, en este caso simula un muro donde puedes dar a me gusta o no me gusta a una publicación.  
   
 Empezando de arriba a bajo primero hago es llamar al componente firebase-config que contiene toda la lógica para conectarse a firebase.  
   
-El estado del componente contiene la variable **posts** que se encargara de recojer los datos recibidos de firebase.  
+El estado del componente contiene la variable **posts** que se encargara de recoger los datos recibidos de firebase.  
 
 El lifecycle **componentWillMount()** contiene la conexión a firebase:
 
@@ -190,11 +190,11 @@ componentWillMount() {
     });
   }
 ```
-Primero creo una conexión llamando a **firebase.database().ref('posts')**. Firebase utiliza una estructura muy parecida a JSON, asi que todos los posts se van a almacenar dentro del "objeto" posts, por eso indicamos en **.ref()** que nos devuelva el objeto que contiene todos los posts.  
+Primero creo una conexión llamando a **firebase.database().ref('posts')**. Firebase utiliza una estructura muy parecida a JSON, así que todos los posts se van a almacenar dentro del "objeto" posts, por eso indicamos en **.ref()** que nos devuelva el objeto que contiene todos los posts.  
   
 La función **postsRef.on('value', snapshot => {})** devuelve la información solicitada y la almacena en el atributo del estado posts.  
   
-Dentro del **render()** del componente primero comprueba si existe el estado posts, ya que como React va como una moto a firebase no le da tiempo a devolver la información y esto crashea la aplicación. Si ya tenemos los posts con la función **Object.keys(posts).map()** recorremos las diferentes "keys" que componen el objeto posts y que son los diferentes post y llamamos al componente **Post** por cada una, pasandole la información. Si todavia no tiene los posts, muestra un mensaje **"Loading..."**.  
+Dentro del **render()** del componente primero comprueba si existe el estado posts, ya que como React va como una moto a firebase no le da tiempo a devolver la información y esto crashea la aplicación. Si ya tenemos los posts con la función **Object.keys(posts).map()** recorremos las diferentes "keys" que componen el objeto posts y que son los diferentes post y llamamos al componente **Post** por cada una, pasándole la información. Si todavía no tiene los posts, muestra un mensaje **"Loading..."**.  
   
 #### Post.js
 ```
@@ -273,7 +273,7 @@ firebase.database().ref('posts/' + this.state.id).set({
 });
 ```  
   
-Conecta a firebase solicitando la key de nuestro post que se encuentra dentro de posts. Despuésm con **.set()** agregamos todo el contenido original y sumamos un upvote o downvote. Es importante agergar todo el contenido original si no lo modifica por undefined.  
+Conecta a firebase solicitando la key de nuestro post que se encuentra dentro de posts. Después con **.set()** agregamos todo el contenido original y sumamos un upvote o downvote. Es importante agregar todo el contenido original si no lo modifica por undefined.  
   
 Dentro del **render()** se muestra toda la información y se añaden dos botones para los votos.  
   
@@ -331,10 +331,10 @@ class AddPost extends Component {
 export default AddPost;
 ```  
   
-Desde aqui podemos añadir posts a nuestro muro. El componente va guardando todos el texto que se introduze en el input y pulsando el boton Submit los envia desde la funcion **handleSubmit()** utilizando **firebaseRef.push({})**. En el interior se encuentra toda la información del nuevo post que se envia a firebase.
+Desde aquí podemos añadir posts a nuestro muro. El componente va guardando todos el texto que se introduce en el input y pulsando el botón Submit los envia desde la función **handleSubmit()** utilizando **firebaseRef.push({})**. En el interior se encuentra toda la información del nuevo post que se envía a firebase.
 
-#### Conclusíon
-La base de datos a tiempo real de firebase hace un gran complemento con nuestas aplicaciones creadas con React. React-router ofrece de una forma fácil nuestras rutas a las diferentes "páginas".  
+#### Conclusión
+La base de datos a tiempo real de firebase hace un gran complemento con nuestras aplicaciones creadas con React. React-router ofrece de una forma fácil nuestras rutas a las diferentes "páginas".  
 
 Hoy has visto una aplicación sencilla, la función de este articulo es comprender como funciona react, react-router y firebase y como puedes combinarlos. Practicando un poco todo lo que has aprendido en este articulo puedes hacer cosas muy chulas.  
 
