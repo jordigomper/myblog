@@ -1,7 +1,7 @@
 ---
 layout: post
 title: React + react-router + Firebase
-img: blog/i_fire.PNG
+img: blog/i_fire.png
 categories: articulo
 ---
   
