@@ -125,7 +125,7 @@ Este componente se encarga de gestionar las diferentes rutas y las muestra por p
   
 La etiqueta **&lt;Switch&gt;** sirve para agrupar las diferentes rutas. Iterará por ellas y solo representará la primera que coincida con el nombre actual de la ruta.  
   
-En este caso hay dos rutas compuestas por el componente **&lt;Route&gt;**. Funciona como enrutador y con él creamos las diferentes rutas. Con el atributo **path** indicamos en que ruta debe mostrar el componente indicado en **component**. En este caso he colocado **addpost** como primera ruta por que de la otra manera siempre mostraría el componente **App** que esta indicado como principal **"/"** ya que coincide con todas.  
+En este caso hay dos rutas compuestas por el componente **&lt;Route&gt;**. Funciona como enrutador y con él creamos las diferentes rutas. Con el atributo **path** indicamos en que ruta debe mostrar el componente indicado en **component**. En este caso he colocado **addpost** como primera ruta por que de la otra manera siempre mostraría el componente **App** que esta indicado como principal **"/"** y coincide con todas.  
   
 ### App.js
 ```
@@ -175,7 +175,7 @@ export default App;
 
 Este componente se encarga de conectar con firebase y mostrar los datos alojados, en este caso simula un muro donde puedes dar a me gusta o no me gusta a una publicación.  
   
-Empezando de arriba a bajo primero hago es llamar al componente firebase-config que contiene toda la lógica para conectarse a firebase.  
+Empezando de arriba a bajo primero llamo al componente firebase-config que contiene toda la lógica para conectarse a firebase.  
   
 El estado del componente contiene la variable **posts** que se encargara de recoger los datos recibidos de firebase.  
 
