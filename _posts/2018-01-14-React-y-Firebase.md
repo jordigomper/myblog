@@ -28,7 +28,7 @@ Empezamos abriendo la consola y creando la estructura para trabajar en local gra
 
 Para nuestra aplicación vamos a seguir la estructura que ya he mencionado en un [articulo anterior](https://jordigomper.github.io/myblog/articulo/2017/09/30/Empieza-tu-proyecto-con-React.html) en el apartado de **Estructurando un proyecto**. Básicamente dentro de la carpeta src vamos a crear una carpeta llamada components para nuestros componentes simples y otra llamada container con los componentes con la lógica de la aplicación. Tiene que tener la siguiente estructura:  
   
-![directorio](../img/a-firebase/directorio.png)  
+![directorio](https://jordigomper.github.io/myblog/img/a-firebase/directorio.png)  
 
 Ahora vamos a seguir los siguientes pasos para instalar react-router y firebase.
 
@@ -44,7 +44,7 @@ Vamos a la [web de firebase](https://firebase.google.com/) y nos creamos una cue
 
 Lo primero que vas a hacer es ir a la pestaña del menú de la izquierda Database y vas a crear una. Una vez creada, vete a la pestaña que esta en la parte superior de la pantalla principal **REGLAS** y tienes que substituir las exclamaciones de **read y write** por igualación:  
 
-![reglas firebase](../img/a-firebase/reglas.png)  
+![reglas firebase](https://jordigomper.github.io/myblog/img/a-firebase/reglas.png)  
 
 Esto permite leer y escribir en la base de datos sin necesidad de estar logeado en la aplicación. Ahora ya lo tienes todo listo para empezar a utilizarla.
 
@@ -63,7 +63,7 @@ var config = {
   databaseURL: "https://reddit-aa152.firebaseio.com",
   projectId: "reddit-aa152",
   storageBucket: "reddit-aa152.appspot.com",
-  messagingSenderId: "256368460841"
+  messagingSenderId: "###########"
 };
 
 firebase.initializeApp(config);
