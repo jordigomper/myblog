@@ -4,10 +4,12 @@ title: React + react-router + Firebase
 img: blog/i_fire.PNG
 categories: articulo
 ---
+  
 
-# React.js, react-route y Firebase
-## [Aprender javascript con MentoringJS.](http://mentoringjs.com)
-### React y firebase ejemplo práctico
+## [Aprender javascript con MentoringJS.](http://mentoringjs.com)  
+
+### React y firebase ejemplo práctico  
+
 
 Hola chic@s!! Os traigo un articulo sobre una pequeña app que combina React.js, react router y firebase. Una combinación perfecta para nuestras app.  
 
@@ -339,9 +341,9 @@ La base de datos a tiempo real de firebase hace un gran complemento con nuestras
 Hoy has visto una aplicación sencilla, la función de este articulo es comprender como funciona react, react-router y firebase y como puedes combinarlos. Practicando un poco todo lo que has aprendido en este articulo puedes hacer cosas muy chulas.  
 
 Para este articulo he consultado las siguientes fuentes:  
-[Un manual de 10 sobre react-router](https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf)  
-[Este articulo puede acabar de resolver tus dudas con firebase](https://css-tricks.com/intro-firebase-react/)
-[Inspiración para crear esta app](https://www.google.com/url?hl=ca&q=https://www.sitepoint.com/reddit-clone-react-firebase/&source=gmail&ust=1516043684340000&usg=AFQjCNHXAXtIYMONfKdzUSph3fDugYdmSA)
+* [Un manual de 10 sobre react-router](https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf)  
+* [Este articulo puede acabar de resolver tus dudas con firebase](https://css-tricks.com/intro-firebase-react/)  
+* [Inspiración para crear esta app](https://www.google.com/url?hl=ca&q=https://www.sitepoint.com/reddit-clone-react-firebase/&source=gmail&ust=1516043684340000&usg=AFQjCNHXAXtIYMONfKdzUSph3fDugYdmSA)
   
 Un saludo, hasta pronto!!  
 
